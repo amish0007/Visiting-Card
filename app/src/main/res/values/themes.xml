@@ -4,10 +4,9 @@
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
-
     <style name="Theme.VisitingCard" parent="Base.Theme.VisitingCard" />
-    
-    <style name="TextAppearance.Design.Hint.InputLayout" parent="Widget.Material3.TextInputLayout.FilledBox.Dense">
-        <item name="colorAccent">#3F51b5</item>
+
+    <style name="MyTextInputLayout_overlay">
+        <item name="colorPrimary">@color/Blue</item>
     </style>
 </resources>

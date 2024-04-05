@@ -80,6 +80,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/linePersonalInfo"
+                android:theme="@style/MyTextInputLayout_overlay"
                 app:endIconMode="clear_text"
                 android:layout_marginTop="10dp">
             <com.google.android.material.textfield.TextInputEditText
@@ -96,6 +97,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/edtNameLayout"
+                android:theme="@style/MyTextInputLayout_overlay"
                 app:endIconMode="clear_text"
                 android:layout_marginTop="10dp">
                 <com.google.android.material.textfield.TextInputEditText
@@ -112,6 +114,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/edtDesignationLayout"
+                android:theme="@style/MyTextInputLayout_overlay"
                 app:endIconMode="clear_text"
                 android:layout_marginTop="10dp">
                 <com.google.android.material.textfield.TextInputEditText
@@ -128,6 +131,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/edtCompanyLayout"
+                android:theme="@style/MyTextInputLayout_overlay"
                 app:endIconMode="clear_text"
                 android:layout_marginTop="10dp">
                 <com.google.android.material.textfield.TextInputEditText
@@ -163,6 +167,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/lineContactInfo"
+                android:theme="@style/MyTextInputLayout_overlay"
                 app:endIconMode="clear_text"
                 android:layout_marginTop="10dp">
             <com.google.android.material.textfield.TextInputEditText
@@ -187,6 +192,7 @@
                 android:id="@+id/rdGroup"
                 android:layout_below="@id/txtWhatsapp"
                 android:orientation="horizontal"
+                android:theme="@style/MyTextInputLayout_overlay"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <RadioButton
@@ -208,6 +214,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/rdGroup"
+                android:theme="@style/MyTextInputLayout_overlay"
                 app:endIconMode="clear_text"
                 android:visibility="gone"
                 android:layout_marginTop="10dp">
@@ -225,6 +232,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/edtWhatsappLayout"
+                android:theme="@style/MyTextInputLayout_overlay"
                 app:endIconMode="clear_text"
                 android:layout_marginTop="10dp">
                 <com.google.android.material.textfield.TextInputEditText
@@ -240,6 +248,7 @@
                 android:id="@+id/edtAddressLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:theme="@style/MyTextInputLayout_overlay"
                 android:layout_below="@+id/edtEmailLayout"
                 app:endIconMode="clear_text"
                 android:layout_marginTop="10dp">
@@ -274,6 +283,7 @@
                 android:id="@+id/lnrCheckBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:theme="@style/MyTextInputLayout_overlay"
                 android:layout_below="@id/lineSkill">
                 <CheckBox
                     android:id="@+id/CbJava"
@@ -322,6 +332,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/lineServiceInfo"
+                android:theme="@style/MyTextInputLayout_overlay"
                 app:endIconMode="clear_text"
                 android:layout_marginTop="10dp">
                 <com.google.android.material.textfield.TextInputEditText
