@@ -2,6 +2,7 @@ package com.example.visitingcard;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -9,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import java.util.concurrent.ConcurrentSkipListSet;
 
 public class DigiCardActivity extends AppCompatActivity {
 
@@ -56,11 +59,18 @@ public class DigiCardActivity extends AppCompatActivity {
         dTxtDesignation.setText(" "+dDesignation);
         dTxtCompany.setText(" "+dCompany);
         dTxtMobile.setText("Mobile Number:- "+dNumber);
-        dTxtWhatsapp.setText("Whatsapp Number:- "+dWhatsapp);
+        if(dWhatsapp.isEmpty())
+        {
+            dTxtWhatsapp.setText("");
+        }
+        else {
+            dTxtWhatsapp.setText("Whatsapp Number:- "+dWhatsapp);
+        }
         dTxtEmail.setText("Email ID:- "+dEmail);
         dTxtAddress.setText("Address:- "+dAddress);
         dTxtSkill.setText(" "+dSkill);
         dTxtService.setText(" "+dService);
         dTxtAboutMe.setText(" "+dAboutMe);
+
     }
 }

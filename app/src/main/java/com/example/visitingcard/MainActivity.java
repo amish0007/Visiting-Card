@@ -198,9 +198,10 @@ public class MainActivity extends AppCompatActivity {
                     edtAddressLayout.setEnabled(false);
                     edtServiceLayout.setEnabled(false);
                     edtWhatsappLayout.setEnabled(false);
-                    Toast.makeText(MainActivity.this,Name+" "+Designation+" "+Company+" "+AboutMe+" "+Contact
+                    //Toast
+                    /*Toast.makeText(MainActivity.this,Name+" "+Designation+" "+Company+" "+AboutMe+" "+Contact
                             +" "+Whatsapp+" "+Email+" "+ Address+" "+Java+" "+Kotlin+" "+Swift+" "+Dart+" "+Service,
-                            Toast.LENGTH_SHORT).show();
+                            Toast.LENGTH_SHORT).show();*/
 
                     Intent intent = new Intent(MainActivity.this,DigiCardActivity.class);
 
