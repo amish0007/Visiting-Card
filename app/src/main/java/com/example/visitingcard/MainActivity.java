@@ -1,7 +1,11 @@
 package com.example.visitingcard;
 
+import android.app.Dialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.Telephony;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -15,16 +19,20 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.activity.OnBackPressedCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.PickVisualMediaRequest;
 import androidx.activity.result.PickVisualMediaRequestKt;
 import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.textfield.TextInputLayout;
+
+import java.util.Objects;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -61,6 +69,8 @@ public class MainActivity extends AppCompatActivity {
         CheckBox CbKotlin = findViewById(R.id.CbKotlin);
         CheckBox CbSwift = findViewById(R.id.CbSwift);
         CheckBox CbDart = findViewById(R.id.CbDart);
+        ImageView imgBack = findViewById(R.id.imgBack);
+
 
         rdGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -94,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
         txtNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -107,8 +118,8 @@ public class MainActivity extends AppCompatActivity {
                 String Service = edtService.getText().toString();
                 String Whatsapp = edtWhatsapp.getText().toString();
                 String Java="",Kotlin="",Swift="",Dart="";
-
-
+                //String ImgButton = txtButton.getText().toString();
+                String ImgProfile = imgProfile.getDrawable().toString();
 
                 if (CbJava.isChecked())
                 {
@@ -127,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
                     Dart = "Dart";
                 }
 
-                if(Name.isEmpty())
+               if(Name.isEmpty())
                 {
                     edtNameLayout.setEnabled(true);
                     edtNameLayout.setError("Enter Name");
@@ -191,24 +202,77 @@ public class MainActivity extends AppCompatActivity {
                             +" "+Whatsapp+" "+Email+" "+ Address+" "+Java+" "+Kotlin+" "+Swift+" "+Dart+" "+Service,
                             Toast.LENGTH_SHORT).show();
 
+                    Intent intent = new Intent(MainActivity.this,DigiCardActivity.class);
+
+                    intent.putExtra("name",Name);
+                    intent.putExtra("designation",Designation);
+                    intent.putExtra("company",Company);
+                    intent.putExtra("aboutMe",AboutMe);
+                    intent.putExtra("contact",Contact);
+                    intent.putExtra("email",Email);
+                    intent.putExtra("whatsapp",Whatsapp);
+                    intent.putExtra("address",Address);
+                    intent.putExtra("service",Service);
+                    intent.putExtra("skill",Java+" "+Kotlin+" "+Swift+" "+Dart);
+                    startActivity(intent);
                 }
             }
         });
+
+        imgBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                customDialog();
+            }
+        });
+
+        getOnBackPressedDispatcher().addCallback(MainActivity.this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                exit();
+            }
+        });
+    }
+
+    //AlertDialog
+    void exit()
+    {
+        AlertDialog alertDialog = new AlertDialog.Builder(this).
+                setCancelable(false).setTitle("Do you want to exit?").setMessage("Digi Card").
+                setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                    }
+                }).
+                setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                }).create();
+        alertDialog.show();
+    }
+
+    void customDialog()
+    {
+        Dialog cusdialog = new Dialog(MainActivity.this);
+        cusdialog.setContentView(R.layout.dialog);
+        Button btnYes =cusdialog.findViewById(R.id.btnYes);
+        Button btnNo =cusdialog.findViewById(R.id.btnNo);
+        cusdialog.show();
+        btnYes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+        btnNo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cusdialog.dismiss();
+            }
+        });
+
     }
 }
-/*
-void init()
-    {
-        EditText edtName = findViewById(R.id.edtName);
-        EditText edtDesignation = findViewById(R.id.edtDesignation);
-        EditText edtCompany = findViewById(R.id.edtCompany);
-        EditText edtAboutMe = findViewById(R.id.edtAboutMe);
-        EditText edtContact = findViewById(R.id.edtContact);
-        EditText edtEmail = findViewById(R.id.edtEmail);
-        EditText edtAddress = findViewById(R.id.edtAddress);
-        EditText edtService = findViewById(R.id.edtService);
-        TextView txtButton= findViewById(R.id.txtButton);
-        CircleImageView imgProfile = findViewById(R.id.imgProfile);
-        TextView txtNext = findViewById(R.id.txtNext);
-    }
- */

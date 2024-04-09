@@ -13,12 +13,21 @@
         android:id="@+id/lnrInfo"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:orientation="vertical"
         android:background="@color/Blue">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_arrow_back_24"
+            android:layout_gravity="center"
+            android:padding="10dp"/>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Digi Card"
+            android:fontFamily="@font/italic"
             android:textColor="@color/white"
             android:textSize="20dp"
             android:gravity="center"/>
@@ -104,7 +113,7 @@
                     android:id="@+id/edtDesignation"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Designetion"
+                    android:hint="Designation"
                     android:inputType="text"
                     android:textColor="@color/black"/>
             </com.google.android.material.textfield.TextInputLayout>
@@ -138,9 +147,10 @@
                     android:id="@+id/edtAboutMe"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="About Me"
-                    android:lines="4"
                     android:inputType="textMultiLine"
+                    android:lines="4"
+                    android:gravity="top"
+                    android:hint="About Me"
                     android:textColor="@color/black"/>
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -342,6 +352,7 @@
                     android:hint="Services"
                     android:inputType="textMultiLine"
                     android:lines="4"
+                    android:gravity="top"
                     android:textColor="@color/black"/>
             </com.google.android.material.textfield.TextInputLayout>
 

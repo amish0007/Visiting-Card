@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DigiCardActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/lnrSec1"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:orientation="vertical"
+                android:background="@drawable/purprect">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/dImgProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:src="@drawable/profile"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:id="@+id/dTxtName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:gravity="center"
+                    android:text="Name"/>
+
+                <TextView
+                    android:id="@+id/dTxtDesignation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:gravity="center"
+                    android:text="Designation"/>
+
+                <TextView
+                    android:id="@+id/dTxtCompany"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:gravity="center"
+                    android:text="Company"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/lnrSec1">
+
+                <TextView
+                    android:id="@+id/dTxtContactInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Contact Info"
+                    android:textStyle="italic"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"/>
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/DDivider1"
+                    android:layout_below="@id/dTxtContactInfo"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dTxtMobile"
+                    android:layout_below="@+id/DDivider1"
+                    android:layout_marginTop="5dp"
+                    android:text="Number"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dTxtWhatsapp"
+                    android:layout_below="@+id/dTxtMobile"
+                    android:layout_marginTop="5dp"
+                    android:text="Whatsapp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dTxtEmail"
+                    android:layout_below="@+id/dTxtWhatsapp"
+                    android:layout_marginTop="5dp"
+                    android:text="Email"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dTxtAddress"
+                    android:layout_below="@+id/dTxtEmail"
+                    android:layout_marginTop="5dp"
+                    android:text="Address"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/dTxtSkills"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dTxtAddress"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="italic"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:text="Skills"/>
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/DDivider2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dTxtSkills"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dTxtSkill"
+                    android:layout_below="@id/DDivider2"
+                    android:layout_marginTop="5dp"
+                    android:text="Kotlin, Java"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/dTxtServices"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dTxtSkill"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="italic"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:text="Services"/>
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/DDivider3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dTxtServices"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dTxtService"
+                    android:layout_below="@id/DDivider3"
+                    android:layout_marginTop="5dp"
+                    android:text="Service"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/dTxtAbout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dTxtService"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="italic"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:text="About Me"/>
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/DDivider4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dTxtAbout"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dTxtAboutMe"
+                    android:layout_below="@id/DDivider4"
+                    android:layout_marginTop="5dp"
+                    android:text="About Me"
+                    android:textColor="@color/black"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
