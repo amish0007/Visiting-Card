@@ -9,18 +9,19 @@
     tools:context=".DigiCardActivity">
 
     <ScrollView
+        android:id="@+id/dScroll"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <LinearLayout
                 android:id="@+id/lnrSec1"
                 android:layout_width="match_parent"
                 android:layout_height="220dp"
-                android:orientation="vertical"
-                android:background="@drawable/purprect">
+                android:background="@drawable/purprect"
+                android:orientation="vertical">
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/dImgProfile"
@@ -68,6 +69,7 @@
             </LinearLayout>
 
             <RelativeLayout
+                android:id="@+id/rel1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:padding="10dp"
@@ -205,5 +207,14 @@
 
         </RelativeLayout>
     </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/dEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="30dp"
+        android:src="@drawable/editicon"/>
 
 </RelativeLayout>

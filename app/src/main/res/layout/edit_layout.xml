@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:backgroundTint="@color/white"
+    android:background="@drawable/dialogback"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/lnrAppName"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:layout_height="30dp">
+
+        <TextView
+            android:id="@+id/appName"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Digi Card App"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+           />
+
+        <LinearLayout
+            android:id="@+id/closeEditLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/closeback"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_margin="2.5dp"
+                android:background="@drawable/close"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/EDivider1"
+        android:layout_below="@+id/lnrAppName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:id="@+id/txtBgColor"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/EDivider1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Background Colors"
+        android:textColor="@color/black"
+        android:layout_marginLeft="10dp"/>
+    <HorizontalScrollView
+        android:id="@+id/EditScroll"
+        android:layout_below="@+id/txtBgColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/BgBlack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/transbox"
+                android:foreground="@drawable/transbox"
+                android:backgroundTint="@color/black"
+                android:layout_margin="10dp">
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/BgRed"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/transbox"
+                android:foreground="@drawable/transbox"
+                android:backgroundTint="@color/red"
+                android:layout_margin="10dp">
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/BgBlue"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/transbox"
+                android:foreground="@drawable/transbox"
+                android:backgroundTint="@color/Blue"
+                android:layout_margin="10dp">
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/BgGreen"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/transbox"
+                android:foreground="@drawable/transbox"
+                android:backgroundTint="@color/green"
+                android:layout_margin="10dp">
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/BgPurple"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/transbox"
+                android:foreground="@drawable/transbox"
+                android:backgroundTint="@color/purple"
+                android:layout_margin="10dp">
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/BgYellow"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/transbox"
+                android:foreground="@drawable/transbox"
+                android:backgroundTint="@color/yellow"
+                android:layout_margin="10dp">
+            </LinearLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/EDivider2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_above="@+id/txtTxtColor"/>
+
+    <TextView
+        android:id="@+id/txtTxtColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Font Colors"
+        android:textColor="@color/black"
+        android:layout_below="@+id/EditScroll"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+    <HorizontalScrollView
+        android:id="@+id/EditScroll2"
+        android:layout_below="@+id/txtTxtColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/FontBlack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/transbox"
+                android:foreground="@drawable/transbox"
+                android:backgroundTint="@color/black"
+                android:layout_margin="10dp">
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/FontRed"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/transbox"
+                android:foreground="@drawable/transbox"
+                android:backgroundTint="@color/red"
+                android:layout_margin="10dp">
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/FontBlue"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/transbox"
+                android:foreground="@drawable/transbox"
+                android:backgroundTint="@color/Blue"
+                android:layout_margin="10dp">
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/FontGreen"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/transbox"
+                android:foreground="@drawable/transbox"
+                android:backgroundTint="@color/green"
+                android:layout_margin="10dp">
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/FontPurple"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/transbox"
+                android:foreground="@drawable/transbox"
+                android:backgroundTint="@color/purple"
+                android:layout_margin="10dp">
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/FontYellow"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/transbox"
+                android:foreground="@drawable/transbox"
+                android:backgroundTint="@color/yellow"
+                android:layout_margin="10dp">
+            </LinearLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/EDivider3"
+        android:layout_above="@+id/DifferentFonts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/DifferentFonts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/EditScroll2"
+        android:text="Different Fonts"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="10dp"/>
+
+    <HorizontalScrollView
+        android:layout_below="@+id/DifferentFonts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:id="@+id/FontItalic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/italic"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                android:text="FONTS"/>
+            <TextView
+                android:id="@+id/FontBebasNeue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bebas_neue"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                android:text="FONTS"/>
+            <TextView
+                android:id="@+id/FontCaveat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/caveat"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
+                android:text="FONTS"/>
+            <TextView
+                android:id="@+id/FontPlayfair"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/playfair"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
+                android:text="FONTS"/>
+            <TextView
+                android:id="@+id/FontTac_One"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/tac_one"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                android:text="FONTS"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+</RelativeLayout>

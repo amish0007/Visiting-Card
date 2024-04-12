@@ -31,6 +31,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.textfield.TextInputLayout;
+import com.squareup.picasso.Picasso;
 
 import java.util.Objects;
 
@@ -38,10 +39,12 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MainActivity extends AppCompatActivity {
     ActivityResultLauncher<PickVisualMediaRequest> pickMedia;
+    Uri uri;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         EditText edtName = findViewById(R.id.edtName);
         EditText edtDesignation = findViewById(R.id.edtDesignation);
@@ -88,10 +91,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        pickMedia= registerForActivityResult(new ActivityResultContracts.PickVisualMedia(),uri->
+        pickMedia= registerForActivityResult(new ActivityResultContracts.PickVisualMedia(),url->
         {
-            if(uri!=null) {
-                imgProfile.setImageURI(uri);
+            if(url!=null) {
+                imgProfile.setImageURI(url);
+                uri = url;
+                //Use of Picasso
+                //Picasso.get().load(uri).into(imgProfile);
             }
         });
 
@@ -119,7 +125,9 @@ public class MainActivity extends AppCompatActivity {
                 String Whatsapp = edtWhatsapp.getText().toString();
                 String Java="",Kotlin="",Swift="",Dart="";
                 //String ImgButton = txtButton.getText().toString();
-                String ImgProfile = imgProfile.getDrawable().toString();
+                //String ImgProfile = imgProfile.getDrawable().toString();
+
+
 
                 if (CbJava.isChecked())
                 {
@@ -215,6 +223,7 @@ public class MainActivity extends AppCompatActivity {
                     intent.putExtra("address",Address);
                     intent.putExtra("service",Service);
                     intent.putExtra("skill",Java+" "+Kotlin+" "+Swift+" "+Dart);
+                    intent.putExtra("urlImage",uri.toString());
                     startActivity(intent);
                 }
             }
@@ -239,7 +248,8 @@ public class MainActivity extends AppCompatActivity {
     void exit()
     {
         AlertDialog alertDialog = new AlertDialog.Builder(this).
-                setCancelable(false).setTitle("Do you want to exit?").setMessage("Digi Card").
+                setCancelable(false).setTitle("Do you want to exit?").
+                setMessage("Digi Card").
                 setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -262,6 +272,7 @@ public class MainActivity extends AppCompatActivity {
         Button btnYes =cusdialog.findViewById(R.id.btnYes);
         Button btnNo =cusdialog.findViewById(R.id.btnNo);
         cusdialog.show();
+
         btnYes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

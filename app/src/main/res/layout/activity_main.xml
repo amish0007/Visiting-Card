@@ -13,15 +13,16 @@
         android:id="@+id/lnrInfo"
         android:layout_width="match_parent"
         android:layout_height="60dp"
+        android:textAlignment="center"
         android:background="@color/Blue">
 
         <ImageView
             android:id="@+id/imgBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/baseline_arrow_back_24"
             android:layout_gravity="center"
-            android:padding="10dp"/>
+            android:padding="10dp"
+            android:src="@drawable/baseline_arrow_back_24" />
 
         <TextView
             android:layout_width="match_parent"
@@ -29,6 +30,7 @@
             android:text="Digi Card"
             android:fontFamily="@font/italic"
             android:textColor="@color/white"
+            android:layout_weight="2"
             android:textSize="20dp"
             android:gravity="center"/>
     </LinearLayout>
@@ -97,6 +99,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Full Name"
+                android:drawableLeft="@drawable/baseline_account_circle_24"
                 android:inputType="text"
                 android:textColor="@color/black"/>
             </com.google.android.material.textfield.TextInputLayout>
@@ -114,6 +117,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Designation"
+                    android:drawableLeft="@drawable/suitcase"
                     android:inputType="text"
                     android:textColor="@color/black"/>
             </com.google.android.material.textfield.TextInputLayout>
@@ -131,6 +135,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Company"
+                    android:drawableLeft="@drawable/company"
                     android:inputType="text"
                     android:textColor="@color/black"/>
             </com.google.android.material.textfield.TextInputLayout>
@@ -185,6 +190,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Contact No"
+                android:drawableLeft="@drawable/contact"
                 android:textColor="@color/black"
                 android:inputType="number"/>
             </com.google.android.material.textfield.TextInputLayout>
@@ -250,6 +256,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Email"
+                    android:drawableLeft="@drawable/gmail"
                     android:textColor="@color/black"
                     android:inputType="textEmailAddress"/>
             </com.google.android.material.textfield.TextInputLayout>
@@ -267,6 +274,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Address"
+                    android:drawableLeft="@drawable/house"
                     android:inputType="text"
                     android:textColor="@color/black"/>
             </com.google.android.material.textfield.TextInputLayout>
